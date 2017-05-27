@@ -1,0 +1,6 @@
+spa.nodeStyle = (function(){
+	return {
+		
+
+	}
+})()

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+    #graph_panel {
+        height: 650px;
+    }
+    
+    #q-content {
+        height: 100%;
+        background-color: #FFF;
+        overflow: hidden;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        position: relative;
+    }
+    
+    #canvas {
+        outline: none;
+        height: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="graph_panel" class="q-panel">
+        <div id="q-content">
+            <div id="canvas" />
+        </div>
+    </div>
+    <script src='/javascripts/jquery-1.12.4.js'></script>
+    <script src='/javascripts/qunee-min.js'></script>
+</body>
+
+<script type="application/javascript">
+var canvas = document.getElementById("canvas");
+var nodeMap = [];
+var graph = new Q.Graph(canvas);
+
+nodeMap[1]= graph.createNode("前置机1", -200, 150);
+nodeMap[3] = graph.createNode("前置机2", 0, 0);
+nodeMap[4] = graph.createNode("主机", 200, 150);
+
+function createEdge(from, to, type, lineWidth, color) {
+    var edge = graph.createEdge(from.name + " -- " + to.name, from, to);
+    return edge;
+}
+var edge1 = createEdge(nodeMap[3], nodeMap[4], Q.Consts.EDGE_TYPE_ELBOW);//gb
+edge1.setStyle(Q.Styles.EDGE_LINE_DASH, [8, 4, 0.01, 4]);
+edge1.setStyle(Q.Styles.LINE_CAP, "round");
+
+var edge2 = createEdge(nodeMap[1], nodeMap[3], Q.Consts.EDGE_TYPE_ELBOW);
+edge2.setStyle(Q.Styles.EDGE_LINE_DASH, [8, 4, 0.01, 4]);
+edge2.setStyle(Q.Styles.LINE_CAP, "round");
+
+
+var offset = 0;
+var index = 0;
+var timer = setInterval(function() {
+    offset += -2;
+    edge1.setStyle(Q.Styles.EDGE_LINE_DASH_OFFSET, offset);
+    edge2.setStyle(Q.Styles.EDGE_LINE_DASH_OFFSET, offset);
+}, 150);
+
+
+
+
+function destroy() {
+    clearInterval(timer);
+}
+</script>
+
+</html>

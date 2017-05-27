@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+</style>
+
+<body>
+    <div class="navbar grayNav">
+        <ul class="nav-left">
+            <li><a href="#">A</a></li>
+            <li><a href="#">B</a></li>
+        </ul>
+        <ul class="nav-right">
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+        </ul>
+    </div>
+    <div class="toolsbar">
+        <div class="nav-wrap">
+            <div class="nav-primary">
+                    <div id="toolbar">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" 
+                                      href="#collapseOne">基本节点
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" 
+                                      href="#collapseTwo"> 注册图片
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" 
+                                      href="#collapseThree"> 默认形状
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    C
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height: 200px;">
+                        <img src="/images/b.png" alt="" id="a">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="quneeBox">
+                        <div id="canvas"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <form class="form-horizontal" role="form" >                   
+                        <h4>Element</h4>
+                        <div class="form-group">
+                            <label for="name" class="col-sm-4 control-label">名称</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="name" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="size" class="col-sm-4 control-label">字体大小</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="size">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="size" class="col-sm-4 control-label">文本颜色</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="size">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="size" class="col-sm-4 control-label">渲染值</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="size">
+                            </div>
+                        </div>
+                        <h4>Node</h4>
+                        <div class="form-group">
+                            <label for="size" class="col-sm-4 control-label">尺寸</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="size">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="size" class="col-sm-4 control-label">坐标</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="size">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="size" class="col-sm-4 control-label">旋转</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="size">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="size" class="col-sm-4 control-label">边框</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="size">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="size" class="col-sm-4 control-label">边框颜色</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="size">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="size" class="col-sm-4 control-label">状态</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="size">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p> this is a demo</p>
+    </footer>
+    <script src='/javascripts/jquery-1.12.4.js'></script>
+    <script src='/javascripts/bootstrap.min.js'></script>
+    <script src='/javascripts/qunee-min.js'></script>
+    <script src='/javascripts/spa.js'></script>
+    <script src='/javascripts/spa.shell.js'></script>
+    <script src='/javascripts/draw.js'></script>
+    <script src='/javascripts/toolbox.js'></script>
+    <script src='/javascripts/nodeStyle.js'></script>
+    <script src='/javascripts/edgeStyle.js'></script>
+    <script src='/javascripts/drag.js'></script>
+</body>
+<script type="text/javascript">
+$(function() {
+    spa.init();
+})
+</script>
+
+</html>
